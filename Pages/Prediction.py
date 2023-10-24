@@ -60,6 +60,7 @@ background: linear-gradient(to right bottom,
 [data-testid="stMarkdownContainer"] > p {{
 color : black;
 font-size:16px;
+font-family: Open Sans, sans-serif;
 }}
 
 </style>

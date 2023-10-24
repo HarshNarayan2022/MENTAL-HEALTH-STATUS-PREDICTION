@@ -1,6 +1,7 @@
 import streamlit as st
 from st_pages import Page, show_pages
-import base64
+
+# import base64
 
 # should be
 
@@ -133,6 +134,11 @@ def main():
             st.markdown("""""")
             st.markdown(
                 '<div style=" font-family: Mali, cursive; font-size:18px; color:black;">1. Select the Dashboard page.</div>',
+                unsafe_allow_html=True,
+            )
+            st.markdown("""""")
+            st.markdown(
+                '<div style=" font-family: Mali, cursive; font-size:18px; color:black;">2. Login with microsoft account. If not then create an account.</div>',
                 unsafe_allow_html=True,
             )
             st.markdown("""""")
