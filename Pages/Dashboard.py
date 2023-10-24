@@ -54,7 +54,7 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
 with st.sidebar:
-    st.image("image\Mental-Health-Status.png")
+    st.image("Mental-Health-Status.png")
     st.image(
         "https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-ask-clipart-cartoon-character-illustration-student-cartoon-of-young-boy-in-vector-png-image_6797449.png"
     )
