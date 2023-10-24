@@ -57,6 +57,11 @@ background: linear-gradient(to right bottom,
     background-color:hsl(174, 72%, 56%);
 }}
 
+[data-testid="stMarkdownContainer"] > p {{
+color : black;
+font-size:16px;
+}}
+
 </style>
 """
 st.markdown(page_bg_img_link, unsafe_allow_html=True)
