@@ -780,24 +780,6 @@ def Prediction():
     # prediction
     # Age, Gender , General_Psychopathology ,Self_Distraction,Denial,Venting,Self_Blame,Behavioural_Disengagement,Acceptance,Active_Coping,Shyness,Loneliness,Self_Esteem,Life_Satisfaction
     if run:
-        with st.empty():
-            for second in range(2):
-                st.success(f"Success - ⏳ {second+1}", icon="✅")
-                sleep(1)
-                st.markdown(
-                    """
-            <style>
-                @keyframes fadeOut {
-                    from { opacity: 1; }
-                    to { opacity: 0; }
-                }
-                .stAlert {
-                    animation: fadeOut 2s ease;
-                }
-            </style>
-        """,
-                    unsafe_allow_html=True,
-                )
         df.to_csv("Sourcedata.csv", index=None)
         st.dataframe(df)
         model = Load_mode()
