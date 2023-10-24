@@ -63,6 +63,7 @@ font-size:16px;
 font-family: Open Sans, sans-serif;
 }}
 
+[data-testid="baseButton-secondary" ] 
 </style>
 """
 st.markdown(page_bg_img_link, unsafe_allow_html=True)
@@ -549,8 +550,7 @@ def Prediction():
                             "Strongly Agree",
                         ],
                     )
-
-    run = st.button("Predict")
+            run = st.button("Predict")
 
     ##Data gathering is completed for prediction##
 
@@ -660,7 +660,7 @@ def Prediction():
             return 3
         elif x == "Often":
             return 4
-        elif x == "Often":
+        elif x == "Very Often":
             return 5
         return int(x)
 
