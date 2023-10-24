@@ -119,11 +119,11 @@ def Prediction():
     with st.container():
         tab1, tab2, tab3, tab4, tab5 = st.tabs(
             [
-                "Coping Strategies Questionaries",
-                "Shyness Questionaries",
-                "Loneliness Questionaries",
-                "Self Esteem Questionaries",
-                "Life satisfaction Questionaries",
+                "Coping Strategies ",
+                "Shyness ",
+                "Loneliness ",
+                "Self Esteem ",
+                "Life satisfaction ",
             ]
         )
         with tab1:
