@@ -66,7 +66,7 @@ def show_explore_page():
     #     initial_sidebar_state="expanded",
     # )
 
-    st.image("image\Dashboard.png")
+    st.image("Dashboard.png")
     st.markdown(
         '<iframe  width="1200" height="700" src="https://app.powerbi.com/reportEmbed?reportId=9c44667c-980c-4fd8-92ed-ff57b547a72d&autoAuth=true&ctid=51b942db-4e9b-4228-b3f4-777327ee4809" frameborder="0" allowFullScreen="true"></iframe>',
         unsafe_allow_html=True,

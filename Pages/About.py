@@ -64,14 +64,14 @@ height : 30px;
 """
 st.markdown(page_bg_img_link, unsafe_allow_html=True)
 with st.sidebar:
-    st.image("image\Mental-Health-Status.png")
+    st.image("Mental-Health-Status.png")
     st.image(
         "https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-ask-clipart-cartoon-character-illustration-student-cartoon-of-young-boy-in-vector-png-image_6797449.png"
     )
 
 
 def about_page():
-    title = st.image("image\About-US.png")
+    title = st.image("About-US.png")
 
     st.markdown(
         '<div style=" font-family: Mali, cursive; font-size:20px;">We are the students of M.Sc Data Science . We developed this web application by sharing each others knowledge and working together as a team.</div>',

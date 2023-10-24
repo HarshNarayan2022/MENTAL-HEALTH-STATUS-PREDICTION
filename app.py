@@ -64,7 +64,7 @@ background: linear-gradient(to right bottom,
 st.markdown(page_bg_img_link, unsafe_allow_html=True)
 
 with st.sidebar:
-    st.image("image\Mental-Health-Status.png")
+    st.image("Mental-Health-Status.png")
     st.image(
         "https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-ask-clipart-cartoon-character-illustration-student-cartoon-of-young-boy-in-vector-png-image_6797449.png"
     )
@@ -81,7 +81,7 @@ show_pages(
 
 # Display the main page of the app with instructions on how to use it
 def main():
-    title = st.image("image\Mental-health-status1.png")
+    title = st.image("Mental-health-status1.png")
     st.markdown(
         '<div style=" font-family: Mali, cursive; font-size:20px;">Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make choices. Mental health is important at every stage of life, from childhood and adolescence through adulthood.</div>',
         unsafe_allow_html=True,
