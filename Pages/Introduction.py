@@ -80,7 +80,7 @@ def Intro():
         url = json.load(file)
 
         # Main title
-        st.image("image\Introduction.png")
+        st.image("Introduction.png")
     # st.markdown(
     #     '<div style="background-color:black; border-radius:7px 3vw;border: solid black; margin-bottom:3rem;   border: solid; text-align: center; color:white; font-size:40px;">Analysis & Prediction of Mental Health Status</div>',
     #     unsafe_allow_html=True,

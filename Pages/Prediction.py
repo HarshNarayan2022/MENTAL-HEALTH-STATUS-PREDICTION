@@ -99,7 +99,7 @@ def Prediction():
     else:
         df = None
 
-    st.image("image\intersted-to-know-your-mental2.png", width=900)
+    st.image("intersted-to-know-your-mental2.png", width=900)
     cols = st.columns([1, 1])
     with st.container():
         with cols[0]:
