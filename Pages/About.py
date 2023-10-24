@@ -74,7 +74,7 @@ def about_page():
     title = st.image("About-US.png")
 
     st.markdown(
-        '<div style=" font-family: Mali, cursive; font-size:20px;">We are the students of M.Sc Data Science . We developed this web application by sharing each others knowledge and working together as a team.</div>',
+        '<div style=" font-family: Mali, cursive; font-size:20px; color:black;">We are the students of M.Sc Data Science . We developed this web application by sharing each others knowledge and working together as a team.</div>',
         unsafe_allow_html=True,
     )
     st.markdown("""---""")
@@ -87,11 +87,11 @@ def about_page():
                 "https://png.pngtree.com/png-vector/20230816/ourmid/pngtree-cartoon-boy-with-glasses-and-a-backpack-clipart-vector-png-image_6988507.png"
             )
             st.markdown(
-                '<div style=" font-family: Mali, cursive;text-align: center; font-size:24px;">Harsh Narayan</div>',
+                '<div style=" font-family: Mali, cursive;text-align: center; font-size:24px; color:black;">Harsh Narayan</div>',
                 unsafe_allow_html=True,
             )
             st.markdown(
-                '<div style=" font-family: Mali, cursive;text-align: center; font-size:16px;">Masters in Data Science</div>',
+                '<div style=" font-family: Mali, cursive;text-align: center; font-size:16px; color:black;">Masters in Data Science</div>',
                 unsafe_allow_html=True,
             )
             st.markdown(
@@ -103,11 +103,11 @@ def about_page():
                 "https://png.pngtree.com/png-vector/20230801/ourmid/pngtree-cute-cartoon-child-with-glasses-and-backpack-holding-up-a-peace-vector-png-image_6824599.png"
             )
             st.markdown(
-                '<div style=" font-family: Mali, cursive;text-align: center; font-size:24px;">Shameek Bhowmick</div>',
+                '<div style=" font-family: Mali, cursive;text-align: center; font-size:24px; color:black;">Shameek Bhowmick</div>',
                 unsafe_allow_html=True,
             )
             st.markdown(
-                '<div style=" font-family: Mali, cursive;text-align: center; font-size:16px;">Masters in Data Science</div>',
+                '<div style=" font-family: Mali, cursive;text-align: center; font-size:16px; color:black;">Masters in Data Science</div>',
                 unsafe_allow_html=True,
             )
             st.markdown(
@@ -119,11 +119,11 @@ def about_page():
                 "https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-iready-clipart-cartoon-school-girl-cartoon-with-book-and-pencil-vector-png-image_6803048.png"
             )
             st.markdown(
-                '<div style=" font-family: Mali, cursive;text-align: center; font-size:24px;">Sakshi Panhalkar</div>',
+                '<div style=" font-family: Mali, cursive;text-align: center; font-size:24px; color:black;">Sakshi Panhalkar</div>',
                 unsafe_allow_html=True,
             )
             st.markdown(
-                '<div style=" font-family: Mali, cursive;text-align: center; font-size:16px;">Masters in Data Science</div>',
+                '<div style=" font-family: Mali, cursive;text-align: center; font-size:16px; color:black;">Masters in Data Science</div>',
                 unsafe_allow_html=True,
             )
             st.markdown(

@@ -83,12 +83,12 @@ show_pages(
 def main():
     title = st.image("Mental-health-status1.png")
     st.markdown(
-        '<div style=" font-family: Mali, cursive; font-size:20px;">Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make choices. Mental health is important at every stage of life, from childhood and adolescence through adulthood.</div>',
+        '<div style=" font-family: Mali, cursive; font-size:20px; color:black;">Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make choices. Mental health is important at every stage of life, from childhood and adolescence through adulthood.</div>',
         unsafe_allow_html=True,
     )
     st.markdown("""""")
     st.markdown(
-        '<div style=" font-family: Mali, cursive; font-size:20px;">Over the course of your life, if you experience mental health problems, your thinking, mood, and behavior could be affected. Many factors contribute to mental health problems, we aim to find those factors.</div>',
+        '<div style=" font-family: Mali, cursive; font-size:20px; color:black;">Over the course of your life, if you experience mental health problems, your thinking, mood, and behavior could be affected. Many factors contribute to mental health problems, we aim to find those factors.</div>',
         unsafe_allow_html=True,
     )
     st.markdown("""""")
@@ -99,50 +99,50 @@ def main():
     with st.container():
         with cols[0]:
             st.markdown(
-                '<div style=" font-family: Mali, cursive; font-size:30px;">How to use this app:</div>',
+                '<div style=" font-family: Mali, cursive; font-size:30px; color:black;">How to use this app:</div>',
                 unsafe_allow_html=True,
             )
             st.markdown("""""")
             st.markdown("""""")
 
             st.markdown(
-                '<div style=" font-family: Mali, cursive; font-size:25px;">👉 To know your Psychopathology condition!</div>',
+                '<div style=" font-family: Mali, cursive; font-size:25px; color:black;">👉 To know your Psychopathology condition!</div>',
                 unsafe_allow_html=True,
             )
             st.markdown("""""")
             st.markdown(
-                '<div style=" font-family: Mali, cursive; font-size:18px;">1. Select the Psychopathology Test from the sidebar.</div>',
+                '<div style=" font-family: Mali, cursive; color:black; font-size:18px;">1. Select the Psychopathology Test from the sidebar.</div>',
                 unsafe_allow_html=True,
             )
             st.markdown("""""")
             st.markdown(
-                '<div style=" font-family: Mali, cursive; font-size:18px;">2. Fill and choose all asked question after reading .</div>',
+                '<div style=" font-family: Mali, cursive; font-size:18px; color:black;">2. Fill and choose all asked question after reading .</div>',
                 unsafe_allow_html=True,
             )
             st.markdown("""""")
             st.markdown(
-                '<div style=" font-family: Mali, cursive; font-size:18px;">3. Attemp all questions of five section and then click on predict button.</div>',
+                '<div style=" font-family: Mali, cursive; font-size:18px; color:black;">3. Attemp all questions of five section and then click on predict button.</div>',
                 unsafe_allow_html=True,
             )
             st.markdown("""""")
             st.markdown("""""")
             st.markdown(
-                '<div style=" font-family: Mali, cursive; font-size:25px;">👉 To see visualization and analysis of our surveyed data!</div>',
+                '<div style=" font-family: Mali, cursive; font-size:25px; color:black;">👉 To see visualization and analysis of our surveyed data!</div>',
                 unsafe_allow_html=True,
             )
             st.markdown("""""")
             st.markdown(
-                '<div style=" font-family: Mali, cursive; font-size:18px;">1. Select the Dashboard page.</div>',
+                '<div style=" font-family: Mali, cursive; font-size:18px; color:black;">1. Select the Dashboard page.</div>',
                 unsafe_allow_html=True,
             )
             st.markdown("""""")
             st.markdown(
-                '<div style=" font-family: Mali, cursive; font-size:25px;">👉 To see detailed explanations of our project!</div>',
+                '<div style=" font-family: Mali, cursive; font-size:25px; color:black;">👉 To see detailed explanations of our project!</div>',
                 unsafe_allow_html=True,
             )
             st.markdown("""""")
             st.markdown(
-                '<div style=" font-family: Mali, cursive; font-size:18px;">1. Select the Introduction page.</div>',
+                '<div style=" font-family: Mali, cursive; font-size:18px; color:black;">1. Select the Introduction page.</div>',
                 unsafe_allow_html=True,
             )
 

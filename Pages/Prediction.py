@@ -100,12 +100,8 @@ def Prediction():
         df = None
 
     st.image("intersted-to-know-your-mental2.png", width=900)
-    cols = st.columns([1, 1])
-    with st.container():
-        with cols[0]:
-            Name = st.text_input("Enter Your name!")
-        with cols[1]:
-            Age = st.number_input("Enter your age!")
+
+    Age = st.number_input("Enter your age!")
 
     cols = st.columns([1, 1])
     with st.container():
@@ -130,7 +126,7 @@ def Prediction():
             # CS- Self Distraction
 
             st.markdown(
-                '<div style="margin-top: 40px; color:black; font-size: 1.6rem;font-weight: 300;text-align: left;">Self Distraction : </div>',
+                '<div style="margin-top: 40px; color:black; font-size: 1.6rem;font-weight: 300;text-align: left; color:black;">Self Distraction : </div>',
                 unsafe_allow_html=True,
             )
             cols = st.columns([1, 1])
@@ -556,7 +552,6 @@ def Prediction():
 
     df = pd.DataFrame(
         {
-            "Name": [Name],
             "Age": [Age],
             "Sex": [Sex],
             "Location": [Location],
@@ -822,7 +817,7 @@ def Prediction():
             ]
         )
         health = model.predict(X)[0]
-        st.markdown(f"Hello {(df['Name'][0])} your mental condition seems {health}.")
+        st.markdown(f"Hello, your mental condition seems {health}.")
 
         if health == "Healthy":
             st.info("you are good")

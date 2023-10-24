@@ -107,16 +107,16 @@ def Intro():
         )
     with col2:
         st.markdown(
-            '<div style=" font-family: Mali, cursive;text-align: center; font-size:50px;">About Us</div>',
+            '<div style=" font-family: Mali, cursive;text-align: center; font-size:50px; color:black;">About Us</div>',
             unsafe_allow_html=True,
         )
 
         st.markdown(
-            '<div style=" font-family: Mali, cursive;margin:1rem 1rem; font-size:22px;">Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make choices. Mental health is important at every stage of life, from childhood and adolescence through adulthood.</div>',
+            '<div style=" font-family: Mali, cursive;margin:1rem 1rem; font-size:22px; color:black;">Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make choices. Mental health is important at every stage of life, from childhood and adolescence through adulthood.</div>',
             unsafe_allow_html=True,
         )
         st.markdown(
-            '<div style=" font-family: Mali, cursive;margin:1rem 1rem; font-size:22px;">Over the course of your life, if you experience mental health problems, your thinking, mood, and behavior could be affected. Many factors contribute to mental health problems, we aim to find those factors.</div>',
+            '<div style=" font-family: Mali, cursive;margin:1rem 1rem; font-size:22px; color:black;">Over the course of your life, if you experience mental health problems, your thinking, mood, and behavior could be affected. Many factors contribute to mental health problems, we aim to find those factors.</div>',
             unsafe_allow_html=True,
         )
 
@@ -127,23 +127,23 @@ def Intro():
 
     with col1:
         st.markdown(
-            '<div style=" font-family: Mali, cursive;text-align: center; font-size:50px;">We Aim To</div>',
+            '<div style=" font-family: Mali, cursive;text-align: center; font-size:50px; color:black;">We Aim To</div>',
             unsafe_allow_html=True,
         )
         st.markdown(
-            '<div style=" font-family: Mali, cursive;margin:1rem 1rem; font-size:34px;">Analyse</div>',
+            '<div style=" font-family: Mali, cursive;margin:1rem 1rem; font-size:34px; color:black;">Analyse</div>',
             unsafe_allow_html=True,
         )
         st.markdown(
-            '<div style=" font-family: Mali, cursive;margin:1rem 1rem; font-size:22px;">Get an idea of what factors affect the overall mental health of a person</div>',
+            '<div style=" font-family: Mali, cursive;margin:1rem 1rem; font-size:22px; color:black;">Get an idea of what factors affect the overall mental health of a person</div>',
             unsafe_allow_html=True,
         )
         st.markdown(
-            '<div style=" font-family: Mali, cursive;margin:1rem 1rem; font-size:34px;">Predict</div>',
+            '<div style=" font-family: Mali, cursive;margin:1rem 1rem; font-size:34px; color:black;">Predict</div>',
             unsafe_allow_html=True,
         )
         st.markdown(
-            '<div style=" font-family: Mali, cursive;margin:1rem 1rem; font-size:22px;">Predict the mental health status of a person based on the selected factors</div>',
+            '<div style=" font-family: Mali, cursive;margin:1rem 1rem; font-size:22px; color:black;">Predict the mental health status of a person based on the selected factors</div>',
             unsafe_allow_html=True,
         )
 
