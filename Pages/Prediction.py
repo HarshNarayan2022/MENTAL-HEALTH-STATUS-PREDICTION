@@ -52,9 +52,11 @@ background: linear-gradient(to right bottom,
 [data-baseweb="tab-list"]{{
     display : flex ;
     justify-content:center;
+    gap:3rem;
     
     border-radius: 15px;
-    background-color:hsl(174, 72%, 56%);
+    background-color: hsla(7.2, 100%, 77.1%, 0.62);
+
 }}
 
 [data-testid="stMarkdownContainer"] > p {{
@@ -63,15 +65,22 @@ font-size:16px;
 font-family: Open Sans, sans-serif;
 }}
 
-[data-testid="baseButton-secondary" ] 
+[data-testid="baseButton-secondary" ] {{
+background-color: white;
+}}
 </style>
 """
 st.markdown(page_bg_img_link, unsafe_allow_html=True)
 
 with st.sidebar:
-    st.image("Mental-Health-Status.png")
+    # st.markdown(
+    #     '<div style=" font-family: Mali, cursive;text-align: center; font-size:30px; color:#ff725e; margin :10px">Mental Health</div>',
+    #     unsafe_allow_html=True,
+    # )
+
     st.image(
-        "https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-ask-clipart-cartoon-character-illustration-student-cartoon-of-young-boy-in-vector-png-image_6797449.png"
+        "Mental health-pana.png",
+        width=320,
     )
 
 
@@ -87,34 +96,21 @@ def Load_mode():
 import streamlit.components.v1 as components
 
 
-def ChangeWidgetFontSize(wgt_txt, wch_font_size="12px"):
-    htmlstr = (
-        """<script>var elements = window.parent.document.querySelectorAll('*'), i;
-                    for (i = 0; i < elements.length; ++i) { if (elements[i].innerText == |wgt_txt|) 
-                        { elements[i].style.fontSize='"""
-        + wch_font_size
-        + """';} } </script>  """
-    )
-
-    htmlstr = htmlstr.replace("|wgt_txt|", "'" + wgt_txt + "'")
-    components.html(f"{htmlstr}", height=0, width=0)
-
-
 def Prediction():
     if os.path.exists("Sourcedata.csv"):
         df = pd.read_csv("Sourcedata.csv", index_col=None)
     else:
         df = None
-
-    st.image("intersted-to-know-your-mental2.png", width=900)
-
-    Age = st.number_input("Enter your age!")
-
+    title = st.markdown(
+        '<div style=" font-family: Mali, cursive;text-align: center; font-size:3.5rem; color: rgb(69, 90, 100); margin-bottom :4rem; ">Intersted to know Mental Health Status!</div>',
+        unsafe_allow_html=True,
+    )
+    Age = st.slider("What is your age?", 0, 100)
+    # Age = st.number_input("Enter your age!")
     cols = st.columns([1, 1])
     with st.container():
         with cols[0]:
             Sex = st.radio("Select Gender", ["Male", "Female"])
-
         with cols[1]:
             Location = st.radio("Select your Location", ["Urban", "Rural"])
 
@@ -570,7 +566,7 @@ def Prediction():
             "SB1": [SB1],
             "SB2": [SB2],
             "BD1": [BD1],
-            "BD2": [BD1],
+            "BD2": [BD2],
             "A1": [A1],
             "A2": [A2],
             "AC1": [AC1],
@@ -625,6 +621,20 @@ def Prediction():
         return int(x)
 
     df["Location"] = df["Location"].apply(clean_location)
+
+    # General_Psychopathology AND Shyness
+    def clean_General_Psychopathology(x):
+        if x == "Not at all":
+            return 1
+        elif x == "Slightly":
+            return 2
+        elif x == "Moderately":
+            return 3
+        elif x == "Very":
+            return 4
+        elif x == "Completely":
+            return 5
+        return int(x)
 
     # General_Psychopathology AND Shyness
     def clean_General_Psychopathology(x):

@@ -54,9 +54,14 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
 with st.sidebar:
-    st.image("Mental-Health-Status.png")
+    # st.markdown(
+    #     '<div style=" font-family: Mali, cursive;text-align: center; font-size:30px; color:#ff725e; margin :10px">Mental Health</div>',
+    #     unsafe_allow_html=True,
+    # )
+
     st.image(
-        "https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-ask-clipart-cartoon-character-illustration-student-cartoon-of-young-boy-in-vector-png-image_6797449.png"
+        "Mental health-pana.png",
+        width=320,
     )
 
 
@@ -66,7 +71,10 @@ def show_explore_page():
     #     initial_sidebar_state="expanded",
     # )
 
-    st.image("Dashboard.png")
+    title = st.markdown(
+        '<div style=" font-family: Mali, cursive;text-align: center; font-size:3.5rem; color: rgb(69, 90, 100); margin-bottom :20px">Dashboard</div>',
+        unsafe_allow_html=True,
+    )
     st.markdown(
         '<iframe  width="1200" height="700" src="https://app.powerbi.com/reportEmbed?reportId=9c44667c-980c-4fd8-92ed-ff57b547a72d&autoAuth=true&ctid=51b942db-4e9b-4228-b3f4-777327ee4809" frameborder="0" allowFullScreen="true"></iframe>',
         unsafe_allow_html=True,

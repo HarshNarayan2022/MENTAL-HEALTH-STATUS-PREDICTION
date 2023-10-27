@@ -64,14 +64,22 @@ height : 30px;
 """
 st.markdown(page_bg_img_link, unsafe_allow_html=True)
 with st.sidebar:
-    st.image("Mental-Health-Status.png")
+    # st.markdown(
+    #     '<div style=" font-family: Mali, cursive;text-align: center; font-size:30px; color:#ff725e; margin :10px">Mental Health</div>',
+    #     unsafe_allow_html=True,
+    # )
+
     st.image(
-        "https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-ask-clipart-cartoon-character-illustration-student-cartoon-of-young-boy-in-vector-png-image_6797449.png"
+        "Mental health-pana.png",
+        width=320,
     )
 
 
 def about_page():
-    title = st.image("About-US.png")
+    title = st.markdown(
+        '<div style=" font-family: Mali, cursive;text-align: center; font-size:3.5rem; color: rgb(69, 90, 100); margin-bottom :20px">About Us</div>',
+        unsafe_allow_html=True,
+    )
 
     st.markdown(
         '<div style=" font-family: Mali, cursive; font-size:20px; color:black;">We are the students of M.Sc Data Science . We developed this web application by sharing each others knowledge and working together as a team.</div>',
@@ -83,9 +91,7 @@ def about_page():
         col = st.columns([1, 1, 1])
         # HARSH #
         with col[0]:
-            st.image(
-                "https://png.pngtree.com/png-vector/20230816/ourmid/pngtree-cartoon-boy-with-glasses-and-a-backpack-clipart-vector-png-image_6988507.png"
-            )
+            st.image("Developer activity-pana.png")
             st.markdown(
                 '<div style=" font-family: Mali, cursive;text-align: center; font-size:24px; color:black;">Harsh Narayan</div>',
                 unsafe_allow_html=True,
@@ -99,9 +105,7 @@ def about_page():
             )
         # SHAMEEK #
         with col[1]:
-            st.image(
-                "https://png.pngtree.com/png-vector/20230801/ourmid/pngtree-cute-cartoon-child-with-glasses-and-backpack-holding-up-a-peace-vector-png-image_6824599.png"
-            )
+            st.image("Standup meeting-pana.png")
             st.markdown(
                 '<div style=" font-family: Mali, cursive;text-align: center; font-size:24px; color:black;">Shameek Bhowmick</div>',
                 unsafe_allow_html=True,
@@ -115,9 +119,7 @@ def about_page():
             )
         # SAKSHI #
         with col[2]:
-            st.image(
-                "https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-iready-clipart-cartoon-school-girl-cartoon-with-book-and-pencil-vector-png-image_6803048.png"
-            )
+            st.image("Report-pana.png")
             st.markdown(
                 '<div style=" font-family: Mali, cursive;text-align: center; font-size:24px; color:black;">Sakshi Panhalkar</div>',
                 unsafe_allow_html=True,

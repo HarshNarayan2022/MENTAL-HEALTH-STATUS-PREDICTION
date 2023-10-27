@@ -52,9 +52,14 @@ background: linear-gradient(to right bottom,
 """
 st.markdown(page_bg_img_link, unsafe_allow_html=True)
 with st.sidebar:
-    st.image("Mental-Health-Status.png")
+    # st.markdown(
+    #     '<div style=" font-family: Mali, cursive;text-align: center; font-size:30px; color:#ff725e; margin :10px">Mental Health</div>',
+    #     unsafe_allow_html=True,
+    # )
+
     st.image(
-        "https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-ask-clipart-cartoon-character-illustration-student-cartoon-of-young-boy-in-vector-png-image_6797449.png"
+        "Mental health-pana.png",
+        width=320,
     )
 
 
@@ -80,7 +85,11 @@ def Intro():
         url = json.load(file)
 
         # Main title
-        st.image("Introduction.png")
+        title = st.markdown(
+            '<div style=" font-family: Mali, cursive;text-align: center; font-size:3.5rem; color: rgb(69, 90, 100); margin-bottom :20px">Introduction</div>',
+            unsafe_allow_html=True,
+        )
+
     # st.markdown(
     #     '<div style="background-color:black; border-radius:7px 3vw;border: solid black; margin-bottom:3rem;   border: solid; text-align: center; color:white; font-size:40px;">Analysis & Prediction of Mental Health Status</div>',
     #     unsafe_allow_html=True,
@@ -88,39 +97,39 @@ def Intro():
 
     # Section First
     col1, col2 = st.columns(2)
-    with col1:
-        st_lottie(
-            url_json,
-            # change the direction of our animation
-            reverse=True,
-            # height and width of animation
-            height=500,
-            width=500,
-            # speed of animation
-            speed=1,
-            # means the animation will run forever like a gif, and not as a still image
-            loop=True,
-            # quality of elements used in the animation, other values are "low" and "medium"
-            quality="high",
-            # THis is just to uniquely identify the animation
-            key="Car",
-        )
-    with col2:
-        st.markdown(
-            '<div style=" font-family: Mali, cursive;text-align: center; font-size:50px; color:black;">About Us</div>',
-            unsafe_allow_html=True,
-        )
+    # with col1:
+    #     st_lottie(
+    #         url_json,
+    #         # change the direction of our animation
+    #         reverse=True,
+    #         # height and width of animation
+    #         height=500,
+    #         width=500,
+    #         # speed of animation
+    #         speed=1,
+    #         # means the animation will run forever like a gif, and not as a still image
+    #         loop=True,
+    #         # quality of elements used in the animation, other values are "low" and "medium"
+    #         quality="high",
+    #         # THis is just to uniquely identify the animation
+    #         key="Car",
+    #     )
+    # with col2:
+    #     st.markdown(
+    #         '<div style=" font-family: Mali, cursive;text-align: center; font-size:50px; color:black;">About Us</div>',
+    #         unsafe_allow_html=True,
+    #     )
 
-        st.markdown(
-            '<div style=" font-family: Mali, cursive;margin:1rem 1rem; font-size:22px; color:black;">Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make choices. Mental health is important at every stage of life, from childhood and adolescence through adulthood.</div>',
-            unsafe_allow_html=True,
-        )
-        st.markdown(
-            '<div style=" font-family: Mali, cursive;margin:1rem 1rem; font-size:22px; color:black;">Over the course of your life, if you experience mental health problems, your thinking, mood, and behavior could be affected. Many factors contribute to mental health problems, we aim to find those factors.</div>',
-            unsafe_allow_html=True,
-        )
+    #     st.markdown(
+    #         '<div style=" font-family: Mali, cursive;margin:1rem 1rem; font-size:22px; color:black;">Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make choices. Mental health is important at every stage of life, from childhood and adolescence through adulthood.</div>',
+    #         unsafe_allow_html=True,
+    #     )
+    #     st.markdown(
+    #         '<div style=" font-family: Mali, cursive;margin:1rem 1rem; font-size:22px; color:black;">Over the course of your life, if you experience mental health problems, your thinking, mood, and behavior could be affected. Many factors contribute to mental health problems, we aim to find those factors.</div>',
+    #         unsafe_allow_html=True,
+    #     )
 
-    st.markdown("""---""")
+    # st.markdown("""---""")
 
     # Section second
     col1, col2 = st.columns(2)
