@@ -817,13 +817,13 @@ def Prediction():
         health = model.predict(X)[0]
         st.markdown(f"Hello, your mental condition seems {health}.")
 
-        if health == "Healthy":
-            st.info("you are good")
-        elif health == "Mild":
-            st.info("you are average")
-        elif health == "Severe":
-            st.info("you are bad")
-        return health
+        # if health == "Healthy":
+        #     st.info("you are good")
+        # elif health == "Mild":
+        #     st.info("you are average")
+        # elif health == "Severe":
+        #     st.info("you are bad")
+        # return health
 
 
 if __name__ == "__main__":

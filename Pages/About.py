@@ -96,10 +96,10 @@ def about_page():
                 '<div style=" font-family: Mali, cursive;text-align: center; font-size:24px; color:black;">Harsh Narayan</div>',
                 unsafe_allow_html=True,
             )
-            st.markdown(
-                '<div style=" font-family: Mali, cursive;text-align: center; font-size:16px; color:black;">Masters in Data Science</div>',
-                unsafe_allow_html=True,
-            )
+            # st.markdown(
+            #     '<div style=" font-family: Mali, cursive;text-align: center; font-size:16px; color:black;">Masters in Data Science</div>',
+            #     unsafe_allow_html=True,
+            # )
             st.markdown(
                 "[![My Skills](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/harsh-narayan-377907264/)"
             )
@@ -110,10 +110,10 @@ def about_page():
                 '<div style=" font-family: Mali, cursive;text-align: center; font-size:24px; color:black;">Shameek Bhowmick</div>',
                 unsafe_allow_html=True,
             )
-            st.markdown(
-                '<div style=" font-family: Mali, cursive;text-align: center; font-size:16px; color:black;">Masters in Data Science</div>',
-                unsafe_allow_html=True,
-            )
+            # st.markdown(
+            #     '<div style=" font-family: Mali, cursive;text-align: center; font-size:16px; color:black;">Masters in Data Science</div>',
+            #     unsafe_allow_html=True,
+            # )
             st.markdown(
                 "[![My Skills](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/shameek-bhowmick-3481131a8/)"
             )
@@ -124,31 +124,13 @@ def about_page():
                 '<div style=" font-family: Mali, cursive;text-align: center; font-size:24px; color:black;">Sakshi Panhalkar</div>',
                 unsafe_allow_html=True,
             )
-            st.markdown(
-                '<div style=" font-family: Mali, cursive;text-align: center; font-size:16px; color:black;">Masters in Data Science</div>',
-                unsafe_allow_html=True,
-            )
+            # st.markdown(
+            #     '<div style=" font-family: Mali, cursive;text-align: center; font-size:16px; color:black;">Masters in Data Science</div>',
+            #     unsafe_allow_html=True,
+            # )
             st.markdown(
                 "[![My Skills](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/sakshi-panhalkar-7188061b4/)"
             )
-
-    # with st.container():
-    #     col = st.columns([1, 2])
-    #     with col[0]:
-    #         st.image("Robot.svg", width=350)
-    #     with col[1]:
-    #         st.title("Models Used:")
-    #         st.write(
-    #             """1. [BERTopic](https://maartengr.github.io/BERTopic/api/bertopic.html#:~:text=BERTopic%20is%20a%20topic%20modeling,words%20in%20the%20topic%20descriptions.)
-    #             is a topic modeling technique that leverages BERT embeddings and c-TF-IDF to create dense clusters allowing for easily interpretable topics whilst keeping important words in the topic descriptions."""
-    #         )
-    #         st.write(
-    #             """2. [KeyBERT](https://maartengr.github.io/KeyBERT/#:~:text=KeyBERT%20is%20a%20minimal%20and,most%20similar%20to%20a%20document.)
-    #             is a minimal and easy-to-use keyword extraction technique that leverages BERT embeddings to create keywords and keyphrases that are most similar to a document."""
-    #         )
-    #         st.write(
-    #             """3. Convolutional Neural Networks (CNNs) are used for text classification. CNNs can identify patterns in text data, such as bigrams, trigrams, or n-grams. CNNs are translation invariant, so they can detect these patterns regardless of their position in the sentence."""
-    #         )
 
 
 if __name__ == "__main__":
