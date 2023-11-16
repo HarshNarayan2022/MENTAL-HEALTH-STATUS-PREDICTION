@@ -546,7 +546,7 @@ def Prediction():
                             "Strongly Agree",
                         ],
                     )
-            run = st.button("Predict")
+            run = st.button("Submit")
 
     ##Data gathering is completed for prediction##
 
@@ -791,7 +791,6 @@ def Prediction():
     # Age, Gender , General_Psychopathology ,Self_Distraction,Denial,Venting,Self_Blame,Behavioural_Disengagement,Acceptance,Active_Coping,Shyness,Loneliness,Self_Esteem,Life_Satisfaction
     if run:
         df.to_csv("Sourcedata.csv", index=None)
-        st.dataframe(df)
         model = Load_mode()
 
         X = np.array(
@@ -815,15 +814,21 @@ def Prediction():
             ]
         )
         health = model.predict(X)[0]
-        st.markdown(f"Hello, your mental condition seems {health}.")
+        st.markdown(f" Mental condition seems {health}.")
 
-        # if health == "Healthy":
-        #     st.info("you are good")
-        # elif health == "Mild":
-        #     st.info("you are average")
-        # elif health == "Severe":
-        #     st.info("you are bad")
-        # return health
+        if health == "Healthy":
+            st.info(
+                "Hello! your answers indicate that you are doing great in your life. We're here to remind you to keep up the great work in maintaining and prioritizing your mental well-being. Whether you're enjoying your favorite activities or connecting with loved ones, keep making those positive choices and taking care of yourself. Wishing you continued wellness and happiness, cheers!"
+            )
+        elif health == "Mild":
+            st.info(
+                "Hello there, based on your answers you seem to do well but we observe that you are struggling to keep up with it. It's completely normal to face challenges. We recommend considering a chat with friends, family, or a mental health professional for additional support. Remember, taking steps for your mental well-being is a positive choice. "
+            )
+        elif health == "Severe":
+            st.info(
+                "Hey there, looks like you might be going through a tough time, consider talking to a mental health professional or someone you trust. They can provide support and guidance. Remember, it's okay to seek help. Take care."
+            )
+        return health
 
 
 if __name__ == "__main__":
