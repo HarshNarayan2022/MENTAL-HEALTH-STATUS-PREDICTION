@@ -1,11 +1,14 @@
 import streamlit as st
-from time import sleep
 
 import os
 import numpy as np
 import pandas as pd
 
 import pickle
+import tensorflow as tf
+import keras
+
+import joblib
 
 st.set_page_config(
     page_title="prediction",
@@ -14,7 +17,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-page_bg_img_link = f"""
+page_bg_img_link = f""" 
 <style>
 [data-testid="stAppViewContainer"]> .main{{
 
@@ -86,9 +89,15 @@ with st.sidebar:
 
 @st.cache_resource
 def Load_mode():
-    with open("train.pkl", "rb") as file:
-        model = pickle.load(file)
+    model = tf.keras.models.load_model("train.h5")
     return model
+
+
+# @st.cache_resource
+# def Load_mode():
+#     with open("train.pkl", "rb") as file:
+#         model = pickle.load(file)
+#     return model
 
 
 # to play with streamlit css properties we use streamlit coponents
@@ -790,45 +799,62 @@ def Prediction():
     # prediction
     # Age, Gender , General_Psychopathology ,Self_Distraction,Denial,Venting,Self_Blame,Behavioural_Disengagement,Acceptance,Active_Coping,Shyness,Loneliness,Self_Esteem,Life_Satisfaction
     if run:
-        df.to_csv("Sourcedata.csv", index=None)
         model = Load_mode()
 
         X = np.array(
-            df[
-                [
-                    "Age",
-                    "Sex",
-                    "Location",
-                    "Self_Distraction",
-                    "Denial",
-                    "Venting",
-                    "Self_Blame",
-                    "Behavioural_Disengagement",
-                    "Acceptance",
-                    "Active_Coping",
-                    "Shyness",
-                    "Loneliness",
-                    "Self_Esteem",
-                    "Life_Satisfaction",
-                ]
+            [
+                df["Age"],
+                df["Sex"],
+                df["Location"],
+                df["Self_Distraction"],
+                df["Denial"],
+                df["Venting"],
+                df["Self_Blame"],
+                df["Behavioural_Disengagement"],
+                df["Acceptance"],
+                df["Active_Coping"],
+                df["Shyness"],
+                df["Loneliness"],
+                df["Self_Esteem"],
+                df["Life_Satisfaction"],
             ]
-        )
-        health = model.predict(X)[0]
-        st.markdown(f" Mental condition seems {health}.")
+        ).reshape(1, 14)
 
-        if health == "Healthy":
-            st.info(
-                "Hello! your answers indicate that you are doing great in your life. We're here to remind you to keep up the great work in maintaining and prioritizing your mental well-being. Whether you're enjoying your favorite activities or connecting with loved ones, keep making those positive choices and taking care of yourself. Wishing you continued wellness and happiness, cheers!"
+        health = model.predict(X)
+
+        # Training set predictions converted to categories
+
+        if health >= 1 and health < 2:
+            health_2 = "Healthy"
+        elif health >= 2 and health <= 3.5:
+            health_2 = "Mild"
+        else:
+            health_2 = "Severe"
+
+        # st.markdown(f" Mental condition seems {health}.")
+
+        st.markdown(
+            '<div style="  color:black; font-size: 1.5rem; font-weight: 50; "> Results: </div>',
+            unsafe_allow_html=True,
+        )
+
+        if health_2 == "Healthy":
+            st.markdown(
+                '<div style=" padding-left: 40px; padding-right: 40px; padding-top: 20px; padding-bottom: 20px;  color:black; font-size: 1.4rem;border-radius:1rem; font-weight: 50;background-color:rgba(61, 166, 198, 0.22) "> Hello! your answers indicate that you are doing great in your life. We are here to remind you to keep up the great work in maintaining and prioritizing your mental well-being. Whether you are enjoying your favorite activities or connecting with loved ones, keep making those positive choices and taking care of yourself. Wishing you continued wellness and happiness, cheers!</div>',
+                unsafe_allow_html=True,
             )
-        elif health == "Mild":
-            st.info(
-                "Hello there, based on your answers you seem to do well but we observe that you are struggling to keep up with it. It's completely normal to face challenges. We recommend considering a chat with friends, family, or a mental health professional for additional support. Remember, taking steps for your mental well-being is a positive choice. "
+
+        elif health_2 == "Mild":
+            st.markdown(
+                '<div style="      padding-left: 40px; padding-right: 40px;padding-top: 20px; padding-bottom: 20px; color:black; font-size: 1.4rem;border-radius:1rem; font-weight: 50;background-color:rgba(61, 166, 198, 0.22) ">  Hello there, based on your answers you seem to do well but we observe that you are struggling to keep up with it. It is completely normal to face challenges. We recommend considering a chat with friends, family, or a mental health professional for additional support. Remember, taking steps for your mental well-being is a positive choice. </div>',
+                unsafe_allow_html=True,
             )
-        elif health == "Severe":
-            st.info(
-                "Hey there, looks like you might be going through a tough time, consider talking to a mental health professional or someone you trust. They can provide support and guidance. Remember, it's okay to seek help. Take care."
+        elif health_2 == "Severe":
+            st.markdown(
+                '<div style="      padding-left: 40px; padding-right: 40px;padding-top: 20px; padding-bottom: 20px; color:black; font-size: 1.4rem;border-radius:1rem; font-weight: 50;background-color:rgba(61, 166, 198, 0.22) ">Hey there, looks like you might be going through a tough time, consider talking to a mental health professional or someone you trust. They can provide support and guidance. Remember, it is okay to seek help. Take care.</div>',
+                unsafe_allow_html=True,
             )
-        return health
+        return health_2
 
 
 if __name__ == "__main__":
