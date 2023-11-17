@@ -4,11 +4,9 @@ import os
 import numpy as np
 import pandas as pd
 
-import pickle
-import tensorflow as tf
-import keras
 
-import joblib
+import tensorflow as tf
+
 
 st.set_page_config(
     page_title="prediction",
