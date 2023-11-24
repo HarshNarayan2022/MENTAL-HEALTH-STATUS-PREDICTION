@@ -78,7 +78,6 @@ show_pages(
     [
         Page(r"app.py", "Home", "🏠"),
         Page(r"Pages/Prediction.py", "Have your Psychopathology test!", "💥"),
-        Page(r"Pages/Introduction.py", "Introduction", "🧠"),
         Page(r"Pages/Dashboard.py", "Dashboard", "⌨"),
         Page(r"Pages/About.py", "About Us", "🦾"),
     ]
@@ -148,16 +147,6 @@ def main():
             st.markdown("""""")
             st.markdown(
                 '<div style=" font-family: Mali, cursive; font-size:18px; color:black;">2. Login with microsoft account. If not then create an account.</div>',
-                unsafe_allow_html=True,
-            )
-            st.markdown("""""")
-            st.markdown(
-                '<div style=" font-family: Mali, cursive; font-size:25px; color:black;">👉 To see detailed explanations of our project!</div>',
-                unsafe_allow_html=True,
-            )
-            st.markdown("""""")
-            st.markdown(
-                '<div style=" font-family: Mali, cursive; font-size:18px; color:black;">1. Select the Introduction page.</div>',
                 unsafe_allow_html=True,
             )
 
