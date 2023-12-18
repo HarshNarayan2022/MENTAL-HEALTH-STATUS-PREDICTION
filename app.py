@@ -118,6 +118,8 @@ def main():
                 unsafe_allow_html=True,
             )
             st.markdown("""""")
+            st.markdown("""""")
+            st.markdown("""""")
             st.markdown(
                 '<div style=" font-family: Mali, cursive; color:black; font-size:18px;">1. Select the Psychopathology Test from the sidebar.</div>',
                 unsafe_allow_html=True,
@@ -133,21 +135,6 @@ def main():
                 unsafe_allow_html=True,
             )
             st.markdown("""""")
-            st.markdown("""""")
-            st.markdown(
-                '<div style=" font-family: Mali, cursive; font-size:25px; color:black;">👉 To see visualization and analysis of our surveyed data!</div>',
-                unsafe_allow_html=True,
-            )
-            st.markdown("""""")
-            st.markdown(
-                '<div style=" font-family: Mali, cursive; font-size:18px; color:black;">1. Select the Dashboard page.</div>',
-                unsafe_allow_html=True,
-            )
-            st.markdown("""""")
-            st.markdown(
-                '<div style=" font-family: Mali, cursive; font-size:18px; color:black;">2. Login with microsoft account. If not then create an account.</div>',
-                unsafe_allow_html=True,
-            )
 
         with cols[1]:
             st.image(
