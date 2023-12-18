@@ -78,7 +78,6 @@ show_pages(
     [
         Page(r"app.py", "Home", "🏠"),
         Page(r"Pages/Prediction.py", "Have your Psychopathology test!", "💥"),
-        Page(r"Pages/Dashboard.py", "Dashboard", "⌨"),
         Page(r"Pages/About.py", "About Us", "🦾"),
     ]
 )
