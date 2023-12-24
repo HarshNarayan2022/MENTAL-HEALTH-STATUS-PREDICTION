@@ -90,7 +90,7 @@ def about_page():
     with st.container():
         col = st.columns([1, 1, 1])
         # HARSH #
-        with col[0]:
+        with col[1]:
             st.image("Developer activity-pana.png")
             st.markdown(
                 '<div style=" font-family: Mali, cursive;text-align: center; font-size:24px; color:black;">Harsh Narayan</div>',
@@ -103,34 +103,34 @@ def about_page():
             st.markdown(
                 "[![My Skills](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/harsh-narayan-377907264/)"
             )
-        # SHAMEEK #
-        with col[1]:
-            st.image("Standup meeting-pana.png")
-            st.markdown(
-                '<div style=" font-family: Mali, cursive;text-align: center; font-size:24px; color:black;">Shameek Bhowmick</div>',
-                unsafe_allow_html=True,
-            )
-            # st.markdown(
-            #     '<div style=" font-family: Mali, cursive;text-align: center; font-size:16px; color:black;">Masters in Data Science</div>',
-            #     unsafe_allow_html=True,
-            # )
-            st.markdown(
-                "[![My Skills](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/shameek-bhowmick-3481131a8/)"
-            )
-        # SAKSHI #
-        with col[2]:
-            st.image("Report-pana.png")
-            st.markdown(
-                '<div style=" font-family: Mali, cursive;text-align: center; font-size:24px; color:black;">Sakshi Panhalkar</div>',
-                unsafe_allow_html=True,
-            )
-            # st.markdown(
-            #     '<div style=" font-family: Mali, cursive;text-align: center; font-size:16px; color:black;">Masters in Data Science</div>',
-            #     unsafe_allow_html=True,
-            # )
-            st.markdown(
-                "[![My Skills](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/sakshi-panhalkar-7188061b4/)"
-            )
+        # # SHAMEEK #
+        # with col[1]:
+        #     st.image("Standup meeting-pana.png")
+        #     st.markdown(
+        #         '<div style=" font-family: Mali, cursive;text-align: center; font-size:24px; color:black;">Shameek Bhowmick</div>',
+        #         unsafe_allow_html=True,
+        #     )
+        #     # st.markdown(
+        #     #     '<div style=" font-family: Mali, cursive;text-align: center; font-size:16px; color:black;">Masters in Data Science</div>',
+        #     #     unsafe_allow_html=True,
+        #     # )
+        #     st.markdown(
+        #         "[![My Skills](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/shameek-bhowmick-3481131a8/)"
+        #     )
+        # # SAKSHI #
+        # with col[2]:
+        #     st.image("Report-pana.png")
+        #     st.markdown(
+        #         '<div style=" font-family: Mali, cursive;text-align: center; font-size:24px; color:black;">Sakshi Panhalkar</div>',
+        #         unsafe_allow_html=True,
+        #     )
+        #     # st.markdown(
+        #     #     '<div style=" font-family: Mali, cursive;text-align: center; font-size:16px; color:black;">Masters in Data Science</div>',
+        #     #     unsafe_allow_html=True,
+        #     # )
+        #     st.markdown(
+        #         "[![My Skills](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/sakshi-panhalkar-7188061b4/)"
+        #     )
 
 
 if __name__ == "__main__":
