@@ -131,7 +131,7 @@ def main():
             )
             st.markdown("""""")
             st.markdown(
-                '<div style=" font-family: Mali, cursive; font-size:18px; color:black;">3. Attemp all questions of five section and then click on predict button.</div>',
+                '<div style=" font-family: Mali, cursive; font-size:18px; color:black;">3. Attempt all questions of five section and then click on predict button.</div>',
                 unsafe_allow_html=True,
             )
             st.markdown("""""")
